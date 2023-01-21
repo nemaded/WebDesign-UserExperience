@@ -1,0 +1,141 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REGISTER</title>
+    <link rel="shortcut icon" type="image/webp" href="images/favicon.webp">
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        footer p{
+            margin-top: 10px;
+            text-align: center;
+            color:orange;
+        }
+        footer h2{
+            font-style: italic;
+            color: blue;
+            text-align: center;
+            margin-top: 40px;
+        }
+        button{
+            box-sizing: border-box;
+            border-radius: 50px;
+            border-color: black;
+            border-width: 3px;
+            width: 100px;
+            height: 40px;
+            
+
+        }
+        
+        
+        .container{
+            
+        background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(https://img.freepik.com/free-photo/flat-lay-travel-composition-with-world-map-wooden-background_169016-16173.jpg?w=1060&t=st=1674098639~exp=1674099239~hmac=cf173b9edf8d1df840f2ab1a0aa5ece32fa3f247819ede5d975635ac81134fc8);
+        height: 100vh;
+        width: 100%;
+        background-position: center;
+        background-size: cover;
+        padding-left: 2%;
+        padding-right: 16%;
+        }
+        .registering h1{
+            font-size: 50px;
+            text-shadow: 0 0 10px  yellowgreen;
+            font-weight: bold;
+            color: aliceblue;
+            text-align: center;
+            margin-bottom: 50px;
+            text-decoration:underline blanchedalmond;
+        }
+        .registering form{
+            
+            color: burlywood;
+            font-size: 30px;
+            line-height: 30px;
+        }
+        .gender{
+            display: inline-block;
+        }
+        input{
+            border-color: chartreuse;
+            box-shadow: 3px solid yellow;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="registering">
+                <h1>REGISTER</h1>
+
+                <form action="https://naturalbrews.sg/ ">
+                    <div class="label">    
+                        <label for="name">Name</label>
+                        <input type="text" name="name" id="name" placeholder="username" required>
+                    </div>
+
+                    <br>
+                    
+
+                    <div class="label">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email" required>
+                    </div>
+
+                    <br>
+
+                    <div >
+                        <label for="birthdate">BirthDate</label>
+                        <input type="date" name="birthdate" id="birthdate">
+                    </div>
+
+                    <br>
+                    
+                    <div class>Gender :
+                        
+                        <br>
+                        <div class="gender" >
+                            <label for="male">Male</label>
+                            <input type="radio" name="Gender" id="male" value="male">
+                        </div>
+                            
+                        
+                        <div >
+                            <label for="female">Female</label>
+                            <input type="radio" name="Gender" id="female" value="female">
+                        </div>
+                            
+
+                    </div>  
+                    <br>
+                    <div >
+                        <label for="age">Age</label>
+                        <input type="number" name="age" id="age" min="1" max="180">
+                    </div>
+                    <br>
+                    <div>
+                        <label for="">Password</label>
+                        <input type="password">
+                    </div>
+                    <br>
+                    <button type="reset">Reset</button>
+                    <br>
+                    <br>
+                    <button type="submit" href="code.html">Submit</button>
+                    
+                </form>
+    
+        </div>
+        <footer>
+            <h2>&copy; Copyright Reserved.</h2>
+            <p>Coder and Designer <br>Darshan Nemade
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
