@@ -1,0 +1,125 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+
+.container{
+    background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(https://images.unsplash.com/photo-1463797221720-6b07e6426c24?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80);
+    height: 100vh;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    padding-left: 2%;
+    padding-right: 16%;
+
+}
+
+.navbar{
+    height: 12%;
+    display: flex;
+    align-items: center;
+}
+
+.coffee_logo{
+    width: 120px;
+    cursor: pointer;
+}
+.menu_icon{
+    width: 90px;
+    cursor: pointer;
+    margin-left: 40px;
+
+}
+nav {
+    flex:1;
+    text-align: right;
+
+}
+nav ul li{
+    list-style:none;
+    margin-left: 40px;
+    display: inline-block;
+    
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: aliceblue;
+    font-size: 24px;
+}
+.row{
+    display: flex;
+    height: 88%;
+    align-items: center;
+}
+.col{
+    flex-basis:50%;
+}
+h1{
+    color:brown;
+    font-size: 100px;
+    line-height: 80px;
+
+}
+p{
+    color: aliceblue;
+    font-size: 20px;
+    line-height: 24px;
+    margin-top: 20px;
+}
+button{
+    width: 180px;
+    color: white ;
+    font-size: 15px;
+    padding: 12px 0;
+    background: brown;
+    border: 0;
+    border-radius: 20px;
+    outline: none;
+    margin-top: 20px;
+    cursor: pointer;
+}
+.card{
+    width: 200px;
+    height: 230px;
+    display: inline-block;
+    border-radius:10px ;
+    padding: 15px 25px;
+    box-sizing:border-box;
+    cursor: pointer;
+    margin: 10px 15px;
+    
+    background-position: center;
+    background-size: cover;
+    transition: transform 0.5s;
+
+}
+.card1{
+    background-image: url(images/card4.webp);
+}
+.card2{
+    background-image: url(images/card2.webp);
+}
+.card3{
+    background-image: url(images/card3.webp);
+}
+.card4{
+    background-image: url(images/card1.webp);
+}
+
+.card:hover{
+    transform:  translateY(-10px);
+}
+h5{
+    font-size: 21px;
+    color: white;
+    text-shadow: 0 0 5px black;
+}
+footer p{
+    text-align: center;
+    color: orange;
+}
+footer h2{
+    text-align: center;
+}
