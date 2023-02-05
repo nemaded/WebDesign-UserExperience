@@ -27,7 +27,16 @@ function deleteRows(e) {
   
   table.deleteRow(rowIndex);
   table.deleteRow(rowIndex);
-  
+  for (var i = 0; i < table.rows.length; i++) {
+    var row = table.rows[i];
+    var checkbox = document.getElementById("checkbox" + i);
+    if (checkbox.checked) {
+      submitBtn.style.backgroundColor = "orange";
+      break;
+    } else {
+      submitBtn.style.backgroundColor = "";
+    }
+  }
 
   
 }
