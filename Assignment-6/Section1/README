@@ -1,0 +1,15 @@
+Form Validation using jQuery
+This is a simple form validation project using jQuery. The project aims to validate the input fields for email, username, and password, and display appropriate error messages in case of any invalid input.
+
+Technologies used:
+HTML5
+CSS3
+JavaScript
+jQuery
+
+Project Features
+The form validates the email field to ensure it starts with only characters and ends with northeastern.edu.
+The form validates the username field to ensure the length is between 3-10 characters only.
+The form validates the password field to ensure it contains at least one special character, a number, a lowercase letter, and an uppercase letter.
+Error messages are displayed in real-time as soon as the input is detected as invalid.
+Upon successful validation, the form redirects to a new page (calc.html).

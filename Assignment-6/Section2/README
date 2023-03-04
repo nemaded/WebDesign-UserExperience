@@ -1,0 +1,26 @@
+Stopwatch
+This is a simple web application that allows you to track time using a stopwatch. The application is a Single Page Application built with HTML, CSS, and JavaScript/jQuery.
+
+Features
+Start/Stop button to start or stop the timer
+Reset button to reset the timer to 00:00:00
+Time is displayed in "HH:MM:SS" format
+
+How to Use
+Clone this repository or download the source code.
+Open the index.html file in your web browser.
+Click the Start button to start the timer.
+Click the Stop button to pause the timer.
+Click the Reset button to reset the timer to 00:00:00.
+
+How it Works
+The timer is implemented using JavaScript and jQuery. We use setTimeout and Promises to implement the timer logic.
+
+When the user clicks the Start button, we create a Promise that resolves after one second. We then use a recursive setTimeout function to wait for the Promise to resolve before updating the timer again. We calculate the elapsed time by subtracting the start time from the current time, and then convert the elapsed time into hours, minutes, and seconds. We then display the time in the format "HH:MM:SS" in the text field.
+
+When the user clicks the Stop button, we set a flag to indicate that the timer should stop running. The recursive setTimeout function will eventually stop because the Promise will no longer be resolved.
+
+When the user clicks the Reset button, we set the flag to stop the timer and reset the text field to display "00:00:00".
+
+Author
+darshan nemade
