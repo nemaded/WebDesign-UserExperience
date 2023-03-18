@@ -1,0 +1,253 @@
+@charset "UTF-8";
+:root {
+  --bg-color: $light-color;
+  --text-color: $dark-color;
+  --primary-color: $primary-color;
+  --secondary-color: $secondary-color;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #c4cec0;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+header .logo img {
+  width: 5rem;
+  height: 5rem;
+}
+header .search input {
+  padding: 10px;
+  border: none;
+  border-radius: 20px;
+  margin-right: 10px;
+  font-size: 1.2rem;
+  width: 200px;
+}
+header .search button {
+  background-color: #e1d5ca;
+  color: #fff;
+  padding: 5px 10px;
+  border: none;
+  font-size: calc-rem(16);
+  margin-left: 10px;
+}
+header .search button:hover {
+  background-color: #ebe2db;
+}
+header .cart a {
+  display: flex;
+  align-items: center;
+  color: var(--text-color);
+  text-decoration: none;
+}
+header .cart a img {
+  max-width: 30px;
+  margin-right: 10px;
+}
+header .cart a span {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+header nav ul {
+  display: flex;
+  list-style: none;
+}
+header nav ul li {
+  margin-right: 30px;
+}
+header nav ul li a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-size: 1.2rem;
+  transition: all 0.2s ease-in-out;
+}
+header nav ul li a:hover {
+  color: #8d5524;
+}
+
+main {
+  max-width: -moz-max-content;
+  max-width: max-content;
+  margin: 0 auto;
+  padding: 0px 0;
+}
+main .hero {
+  background-image: url("Images/CoffeeShop4.jpg");
+  background-size: cover;
+  background-position: center;
+  background-color: white;
+  text-align: center;
+  padding: 100px 0;
+}
+main .hero h2 {
+  font-size: 4rem;
+  color: white;
+  margin-bottom: 20px;
+}
+main .hero p {
+  color: white;
+  font-size: 1.5rem;
+  margin-bottom: 40px;
+}
+main .hero .btn {
+  background-color: #8d5524;
+  color: white;
+  font-size: 1.5rem;
+  padding: 15px 40px;
+  border-radius: 30px;
+  transition: background-color 0.2s ease;
+}
+main .hero .btn:hover {
+  background-color: #643d1a;
+}
+main .featured {
+  margin-top: 50px;
+}
+main .featured h2 {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 50px;
+}
+main .featured ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 50px;
+}
+main .featured ul li {
+  background-color: #f1e6d1;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+main .featured ul li img {
+  width: 100%;
+  height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main .featured ul li h3 {
+  font-size: 2rem;
+  margin: 20px;
+}
+main .featured ul li p {
+  font-size: 1.2rem;
+  margin: 0 20px 20px;
+}
+main .featured ul li span {
+  display: block;
+  font-size: 1.5rem;
+  margin: 20px;
+  font-weight: bold;
+}
+main .featured ul li button {
+  background-color: #8d5524;
+  color: white;
+  font-size: 1.5rem;
+  padding: 10px 30px;
+  border-radius: 30px;
+  transition: background-color 0.2s ease;
+}
+main .featured ul li button:hover {
+  background-color: #643d1a;
+}
+main .about {
+  background-color: white;
+  padding: 60px;
+}
+main .about h2 {
+  font-size: 36px;
+  margin-bottom: 30px;
+}
+main .about p {
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 30px;
+}
+main .about .btn {
+  display: inline-block;
+  background-color: #8c6239;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 18px;
+  transition: all 0.3s ease;
+}
+main .about .btn:hover {
+  background-color: #654729;
+}
+main .reviews {
+  background-color: white;
+  padding: 60px;
+}
+main .reviews h2 {
+  font-size: 36px;
+  margin-bottom: 30px;
+}
+main .reviews ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+main .reviews li {
+  margin-bottom: 60px;
+  padding-left: 60px;
+  position: relative;
+}
+main .reviews li blockquote {
+  font-size: 24px;
+  font-style: italic;
+  margin-bottom: 20px;
+}
+main .reviews li cite {
+  font-size: 18px;
+  font-style: normal;
+  font-weight: bold;
+}
+main .reviews li:before {
+  content: "“";
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 60px;
+  color: #8c6239;
+}
+main footer {
+  background-color: #222;
+  padding: 60px;
+}
+main footer .container {
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  margin: 0 auto;
+}
+main footer .container .row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+main footer h3 {
+  font-size: 24px;
+  color: #fff;
+  margin-bottom: 30px;
+}
+main footer p {
+  font-size: 18px;
+  color: #fff;
+  line-height: 1.5;
+  margin-bottom: 30px;
+}
+main footer ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+  color: #fff;
+  line-height: 1.5;
+}
+main footer li {
+  margin-bottom: 10px;
+}/*# sourceMappingURL=Styles.css.map */

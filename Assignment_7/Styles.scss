@@ -1,0 +1,357 @@
+// Variables
+$primary-color: #703704;
+$secondary-color: #c6864285;
+$light-color: #f1e6d1;
+$dark-color: #1c1c1c;
+$font-family: 'Helvetica Neue', sans-serif;
+
+// Custom Properties
+:root {
+  --bg-color: $light-color;
+  --text-color: $dark-color;
+  --primary-color: $primary-color;
+  --secondary-color: $secondary-color;
+}
+
+// Mixins
+@mixin button-style {
+  background-color: var(--primary-color);
+  color: var(--bg-color);
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    background-color: $primary-color;
+  }
+}
+
+// Functions
+@function calculate-width($container, $item) {
+  @return ($item / $container) * 100%;
+}
+
+// Placeholder Selectors
+%title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 50px;
+}
+
+%card {
+  background-color: $secondary-color;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    transform: translateY(-10px);
+  }
+}
+
+// Nesting
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $secondary-color;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+
+  .logo {
+    img {
+      width: 5rem;
+      height: 5rem;
+    }
+  }
+
+  .search {
+    input {
+      padding: 10px;
+      border: none;
+      border-radius: 20px;
+      margin-right: 10px;
+      font-size: 1.2rem;
+      width: 200px;
+    }
+    button {
+        background-color: $primary-color;
+        color: #fff;
+        padding: 5px 10px;
+        border: none;
+        font-size: calc-rem(16);
+        margin-left: 10px;
+        &:hover {
+          background-color: darken($primary-color, 10%);
+    }
+    }
+  }
+
+  .cart {
+    a {
+      display: flex;
+      align-items: center;
+      color: var(--text-color);
+      text-decoration: none;
+
+      img {
+        max-width: 30px;
+        margin-right: 10px;
+      }
+
+      span {
+        font-size: 1.2rem;
+        font-weight: bold;
+      }
+    }
+  }
+
+  nav {
+    ul {
+      display: flex;
+      list-style: none;
+
+      li {
+        margin-right: 30px;
+
+        a {
+          text-decoration: none;
+          color: var(--text-color);
+          font-size: 1.2rem;
+          transition: all 0.2s ease-in-out;
+
+          &:hover {
+            color: $primary-color;
+          }
+        }
+      }
+    }
+  }
+}
+
+main {
+    max-width: max-content;
+    margin: 0 auto;
+    padding: 0px 0;
+  
+    .hero {
+      background-image: url('Images/CoffeeShop4.jpg');
+      background-size: cover;
+      background-position: center;
+      background-color: white;
+      text-align: center;
+      padding: 100px 0;
+  
+      h2 {
+        font-size: 4rem;
+        color: white;
+        margin-bottom: 20px;
+      }
+  
+      p {
+        color: white;
+        font-size: 1.5rem;
+        margin-bottom: 40px;
+      }
+  
+      .btn {
+        background-color: $primary-color;
+        color: white;
+        font-size: 1.5rem;
+        padding: 15px 40px;
+        border-radius: 30px;
+        transition: background-color 0.2s ease;
+  
+        &:hover {
+          background-color: darken($primary-color, 10%);
+        }
+      }
+    }
+  
+    .featured {
+      margin-top: 50px;
+  
+      h2 {
+        text-align: center;
+        font-size: 3rem;
+        margin-bottom: 50px;
+      }
+  
+      ul {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-gap: 50px;
+  
+        li {
+          background-color: $light-color;
+          border-radius: 10px;
+          box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+          overflow: hidden;
+  
+          img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+          }
+  
+          h3 {
+            font-size: 2rem;
+            margin: 20px;
+          }
+  
+          p {
+            font-size: 1.2rem;
+            margin: 0 20px 20px;
+          }
+  
+          span {
+            display: block;
+            font-size: 1.5rem;
+            margin: 20px;
+            font-weight: bold;
+          }
+  
+          button {
+            background-color: $primary-color;
+            color: white;
+            font-size: 1.5rem;
+            padding: 10px 30px;
+            border-radius: 30px;
+            transition: background-color 0.2s ease;
+  
+            &:hover {
+              background-color: darken($primary-color, 10%);
+            }
+          }
+        }
+      }
+    }
+   // About section
+ .about {
+    background-color: white;
+    padding: 60px;
+  
+    h2 {
+      font-size: 36px;
+      margin-bottom: 30px;
+    }
+  
+    p {
+      font-size: 18px;
+      line-height: 1.5;
+      margin-bottom: 30px;
+    }
+  
+    .btn {
+      display: inline-block;
+      background-color: #8c6239;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 4px;
+      text-decoration: none;
+      font-size: 18px;
+      transition: all 0.3s ease;
+  
+      &:hover {
+        background-color: #654729;
+      }
+    }
+  }
+  
+  // Reviews section
+  .reviews {
+    background-color: white;
+    padding: 60px;
+  
+    h2 {
+      font-size: 36px;
+      margin-bottom: 30px;
+    }
+  
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+  
+    li {
+      margin-bottom: 60px;
+      padding-left: 60px;
+      position: relative;
+  
+      blockquote {
+        font-size: 24px;
+        font-style: italic;
+        margin-bottom: 20px;
+      }
+  
+      cite {
+        font-size: 18px;
+        font-style: normal;
+        font-weight: bold;
+      }
+  
+      &:before {
+        content: "\201C";
+        position: absolute;
+        top: 0;
+        left: 0;
+        font-size: 60px;
+        color: #8c6239;
+      }
+    }
+  }
+  
+  // Footer section
+  footer {
+    background-color: #222;
+    padding: 60px;
+  
+    .container {
+      max-width: fit-content;
+      margin: 0 auto;
+  
+      .row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+    }
+  
+    h3 {
+      font-size: 24px;
+      color: #fff;
+      margin-bottom: 30px;
+    }
+  
+    p {
+      font-size: 18px;
+      color: #fff;
+      line-height: 1.5;
+      margin-bottom: 30px;
+    }
+  
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      font-size: 18px;
+      color: #fff;
+      line-height: 1.5;
+    }
+  
+    li {
+      margin-bottom: 10px;
+    }
+  }   
+}
+  
+
